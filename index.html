@@ -71,9 +71,9 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-111" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-Markdown--Hexo" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2025/03/04/111/" class="article-date">
+    <a href="/2025/03/04/Markdown--Hexo/" class="article-date">
   <time class="dt-published" datetime="2025-03-04T02:58:05.717Z" itemprop="datePublished">2025-03-04</time>
 </a>
     
@@ -83,12 +83,90 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>111</p>
+        <h1 id="Markdown部署Hexo方法"><a href="#Markdown部署Hexo方法" class="headerlink" title="Markdown部署Hexo方法"></a>Markdown部署Hexo方法</h1><h3 id="1-确保-Markdown-文件保存在正确的位置"><a href="#1-确保-Markdown-文件保存在正确的位置" class="headerlink" title="1. 确保 Markdown 文件保存在正确的位置"></a><strong>1. 确保 Markdown 文件保存在正确的位置</strong></h3><p>Hexo 要求所有的文章 Markdown 文件必须保存在 <code>source/_posts</code> 目录中。例如：</p>
+<p>复制</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\86182\blog\source\_posts\my-first-post.md</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>文件名</strong>：建议使用英文和短横线（<code>-</code>）分隔，避免使用空格或特殊字符。</li>
+<li><strong>文件路径</strong>：确保文件路径正确，不要将文件保存到其他目录。</li>
+</ul>
+<hr>
+<h3 id="2-使用-Typora-编写-Markdown-文件"><a href="#2-使用-Typora-编写-Markdown-文件" class="headerlink" title="2. 使用 Typora 编写 Markdown 文件"></a><strong>2. 使用 Typora 编写 Markdown 文件</strong></h3><ol>
+<li><p>打开 Typora。</p>
+</li>
+<li><p>编写你的文章内容。</p>
+</li>
+<li><p>在文件开头添加 <strong>Front Matter</strong>，用于定义文章的元数据（如标题、日期、分类等）。例如：</p>
+<p>markdown</p>
+<p>复制</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 我的第一篇博客</span><br><span class="line">date: 2023-10-01</span><br><span class="line">categories: 随笔</span><br><span class="line">tags:</span><br><span class="line">  - Hexo</span><br><span class="line">  - 博客</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>**<code>title</code>**：文章标题。</li>
+<li>**<code>date</code>**：文章发布日期（格式为 <code>YYYY-MM-DD</code>）。</li>
+<li>**<code>categories</code>**：文章分类（可以是一个或多个）。</li>
+<li>**<code>tags</code>**：文章标签（可以是一个或多个）。</li>
+</ul>
+</li>
+<li><p>保存文件到 <code>source/_posts</code> 目录中。例如：</p>
+<p>复制</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\86182\blog\source\_posts\my-first-post.md</span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<h3 id="3-清除缓存并重新生成文件"><a href="#3-清除缓存并重新生成文件" class="headerlink" title="3. 清除缓存并重新生成文件"></a><strong>3. 清除缓存并重新生成文件</strong></h3><p>在 Typora 中保存文件后，运行以下命令清除缓存并重新生成静态文件：</p>
+<p>bash</p>
+<p>复制</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="4-部署到-GitHub-Pages"><a href="#4-部署到-GitHub-Pages" class="headerlink" title="4. 部署到 GitHub Pages"></a><strong>4. 部署到 GitHub Pages</strong></h3><p>运行以下命令将生成的静态文件部署到 GitHub Pages：</p>
+<p>bash</p>
+<p>复制</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="5-访问-GitHub-Pages"><a href="#5-访问-GitHub-Pages" class="headerlink" title="5. 访问 GitHub Pages"></a><strong>5. 访问 GitHub Pages</strong></h3><ol>
+<li>打开浏览器，访问你的 GitHub Pages 地址（例如 <code>https://YYstar342.github.io</code>）。</li>
+<li>如果文章显示正常，表示操作成功。</li>
+</ol>
+<hr>
+<h3 id="6-检查生成的文件"><a href="#6-检查生成的文件" class="headerlink" title="6. 检查生成的文件"></a><strong>6. 检查生成的文件</strong></h3><p>如果文章仍然看不到，可以检查以下内容：</p>
+<ol>
+<li>打开 Hexo 项目的 <code>public</code> 目录，检查是否有对应的 HTML 文件（例如 <code>public/2023/10/01/my-first-post/index.html</code>）。</li>
+<li>如果没有生成对应的 HTML 文件，可能是以下原因：<ul>
+<li>Markdown 文件未正确保存到 <code>source/_posts</code> 目录。</li>
+<li>Front Matter 格式错误。</li>
+<li>文章发布时间是未来时间（Hexo 默认不会生成未来文章）。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="7-启用未来文章生成（可选）"><a href="#7-启用未来文章生成（可选）" class="headerlink" title="7. 启用未来文章生成（可选）"></a><strong>7. 启用未来文章生成（可选）</strong></h3><p>如果文章的发布时间是未来时间，可以在 <code>_config.yml</code> 中启用未来文章生成：</p>
+<p>yaml</p>
+<p>复制</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">future: true</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="8-检查-GitHub-Pages-设置"><a href="#8-检查-GitHub-Pages-设置" class="headerlink" title="8. 检查 GitHub Pages 设置"></a><strong>8. 检查 GitHub Pages 设置</strong></h3><ol>
+<li>打开 GitHub 仓库页面（例如 <code>https://github.com/YYstar342/YYstar342.github.io</code>）。</li>
+<li>点击 <strong>Settings</strong> 选项卡。</li>
+<li>在左侧菜单中选择 <strong>Pages</strong>。</li>
+<li>确保 <strong>Source</strong> 部分选择了正确的分支（通常是 <code>main</code> 或 <code>master</code>）。</li>
+</ol>
+<hr>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a><strong>总结</strong></h3><ol>
+<li>使用 Typora 编写 Markdown 文件，并保存到 <code>source/_posts</code> 目录。</li>
+<li>确保文件包含正确的 Front Matter。</li>
+<li>清除缓存并重新生成静态文件。</li>
+<li>部署到 GitHub Pages。</li>
+<li>访问 <code>https://YYstar342.github.io</code> 查看效果。</li>
+</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/04/111/" data-id="cm7twmrwz000168dp7i1h3ht8" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/04/Markdown--Hexo/" data-id="cm7tx2axn0000gsdpclgcdw68" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -100,9 +178,9 @@
 
 
   
-    <article id="post-Javase" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-javase" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2025/03/01/Javase/" class="article-date">
+    <a href="/2025/03/01/javase/" class="article-date">
   <time class="dt-published" datetime="2025-03-01T12:03:31.516Z" itemprop="datePublished">2025-03-01</time>
 </a>
     
@@ -224,7 +302,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/01/Javase/" data-id="cm7twmrwc000068dphx2vcaab" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/01/javase/" data-id="cm7tx2axv0001gsdp8b4wh1mr" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -275,7 +353,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/01/hello-world/" data-id="cm7twmrx1000268dpctqje6p1" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/01/hello-world/" data-id="cm7tx2axy0002gsdp13wo0day" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -318,11 +396,11 @@
       <ul>
         
           <li>
-            <a href="/2025/03/04/111/">(no title)</a>
+            <a href="/2025/03/04/Markdown--Hexo/">(no title)</a>
           </li>
         
           <li>
-            <a href="/2025/03/01/Javase/">(no title)</a>
+            <a href="/2025/03/01/javase/">(no title)</a>
           </li>
         
           <li>
