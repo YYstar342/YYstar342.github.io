@@ -1,4 +1,4 @@
-package giuhub.YYstar342.Array;
+package giuhub.YYstar342.OOP;
 
 //预定义Person类
 public class Person {
